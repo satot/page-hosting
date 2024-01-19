@@ -17,7 +17,7 @@
   </head>
   <body>
     <h1>GitHub Static Page Hosting Test!</h1>
-		
+
     <div class="wrapper">
       <div class="row">
         <canvas id="js__clock" width="150" height="150"></canvas>
@@ -32,7 +32,15 @@
       <p><button onclick="trigger('AddToCart')">AddToCart</button></p>
       <p><button onclick="trigger('CompletePayment')">CompletePayment</button></p>
     </div>
+    <div>
+      <p>URL:
+      <span id="url"></span>
+      </p>
+    </div>
     
     <script src="js/draw_clock.js"></script>
+    <script>
+      document.getElementById('url').textContent = window.location.href;
+    </script>
   </body>
 </html>
