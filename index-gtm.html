@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+      <title>GitHub Static Page Hosting Test!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PKFNH5N6');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKFNH5N6"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <h1>GitHub Static Page Hosting Test!</h1>
+
+    <div class="wrapper">
+      <div class="row">
+        <canvas id="js__clock" width="150" height="150"></canvas>
+      </div>
+      <div class="row">
+        <p id="js__date"></p>
+        <p id="js__time"></p>
+      </div>
+    </div>
+    <div>
+      <p><button id="view-content">ViewContent</button></p>
+      <p><button id="add-to-cart">AddToCart</button></p>
+      <p><button id="complete-payment">CompletePayment</button></p>
+    </div>
+    <div>
+      <p>URL:
+      <span id="url"></span>
+      </p>
+    </div>
+    
+    <script src="js/draw_clock.js"></script>
+    <script>
+      document.getElementById('url').textContent = window.location.href;
+    </script>
+  </body>
+</html>
