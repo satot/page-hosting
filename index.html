@@ -33,14 +33,40 @@
       <p><button onclick="trigger('CompletePayment')">CompletePayment</button></p>
     </div>
     <div>
-      <p>URL:
+      <p>Current URL:
       <span id="url"></span>
       </p>
+    </div>
+    <hr/>
+    <div>
+      <p>Link generator</p>
+      <p>URL:
+      <input id="linkable" type="text" minlength="10" />
+      <button id="generate-link">Generate Link</button>
+      </p>
+      <p><div id="link-container"></div></p>
     </div>
     
     <script src="js/draw_clock.js"></script>
     <script>
       document.getElementById('url').textContent = window.location.href;
+    </script>
+    <script>
+      var button = document.getElementById('generate-link').addEventListener('click', () => {
+        document.getElementById('link-container').replaceChildren();
+        var link = document.getElementById('linkable').value;
+        if (link.length == 0) {
+          var error = document.createElement('span');
+          error.innerText = 'Please provide link in the box above ;)';
+          document.getElementById('link-container').appendChild(error);
+          return;
+        }
+        var anchor = document.createElement('a');
+        anchor.href = link;
+        anchor.textContent = link;
+        document.getElementById('link-container').appendChild(anchor);
+        console.log('hoge2');
+      });
     </script>
   </body>
 </html>
